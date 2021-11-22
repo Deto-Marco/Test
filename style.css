@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Oswald', sans-serif;
+}
+
+:root{
+    --bg-color-1:#F2F2F2;
+    --bg-color-2:#B0B7BF;
+    --bg-color-3:#65768C;
+    --link-color:#193559;
+    --header-color:#011640;
+    --header-color-2:#193559;
+    --button-text-color:#f2f2f2;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(360deg, var(--bg-color-2) 42%, var(--bg-color-1) 88%);
+}
+
+.flex-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flip-logo:hover {
+    transform: rotateY(180deg);
+    transition: transform 6.6s;
+    transform-style: preserve-3d;
+    perspective: 300em;
+    box-shadow: 6px 8px 2px 6px var(--bg-color-2), 4px 6px 5px 0px var(--bg-color-3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+   position: fixed;
+   bottom: 30px;
+   letter-spacing: 0.3em;
+   text-transform: uppercase;
+   word-spacing: 480px;
+   
+}
+
+a {
+    font-family: 'Oswald', sans-serif;
+    color: var(--button-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--bg-color-3);
+    transition: ease-in-out 1.9s;
+
+}
+
+
+.nav-js {
+    display: none;
+}
+
+@media only screen and (max-width:1720px) {
+    .navbar {
+        word-spacing: 162px;
+    }
+    
+}
+
+@media only screen and (max-width:764px) {
+    
+   .navbar {
+       display: none;
+        
+     } 
+     
+.nav-js{
+        display:flex;       
+    }
+}
